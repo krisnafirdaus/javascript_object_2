@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.card {
+  /* border: solid black 1px; */
+  width: 20%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 0.4fr;
+  grid-template-areas:
+    "img"
+    "contain"
+    "button";
+
+  transition: transform 0.5s;
+
+  -webkit-box-shadow: -2px 6px 16px 1px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: -2px 6px 16px 1px rgba(0, 0, 0, 0.31);
+  box-shadow: -2px 6px 16px 1px rgba(0, 0, 0, 0.31);
+
+  margin: 2px;
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: scale(
+    1.05
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.img {
+  grid-area: img;
+  background-color: blueviolet;
+  /* background-image: url('https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'); */
+  background-size: cover;
+}
+
+.contain {
+  grid-area: contain;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  padding: 10px;
+}
+
+.button {
+  grid-area: button;
+  background-color: chartreuse;
+}
+
+.button {
+  background-color: salmon;
+  border-radius: 10%;
+  width: 50%;
+  height: 30%;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+.name {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.sciName {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 90%;
+  }
+}
